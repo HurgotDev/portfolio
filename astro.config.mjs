@@ -8,4 +8,5 @@ export default defineConfig({
   integrations: [tailwind(), robotsTxt()],
   output: "static",
   site: "https://hurgotdev.github.io/porfolio/",
+  base: "/porfolio/",
 });
