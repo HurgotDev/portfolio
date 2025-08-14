@@ -1,0 +1,114 @@
+---
+import Layout from "@/layouts/Layout.astro"
+
+import AboutMe from "@/components/AboutMe.astro"
+import Briefcase from "@/components/icons/Briefcase.astro"
+import CodeIcon from "@/components/icons/Code.astro"
+import Experience from "@/components/Experience.astro"
+import ProfileCheck from "@/components/icons/ProfileCheck.astro"
+import Projects from "@/components/Projects.astro"
+import SectionContainer from "@/components/SectionContainer.astro"
+import Hero from "@/components/Hero.astro"
+import LinkButton from "@/components/LinkButton.astro"
+---
+
+<Layout
+  title="Portfolio de Hugo Gutiérrez - Tech Lead y Desarrollador FullStack"
+  description="Contrata a Hugo Gutiérrez para crear tu aplicación web o móvil. Tech Lead y Desarrollador FullStack especializado en React, Next.js y Feathers.js. Experiencia en liderazgo técnico y metodologías ágiles."
+>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+      </slot>
+    </Hero>
+    </SectionContainer>
+    <div class="space-y-24">
+    <SectionContainer id="experiencia">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <Briefcase class="size-8" />
+        Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      
+      <div class="flex flex-wrap gap-4 mb-8">
+        <button
+          class="px-4 py-2 transition-colors rounded-full text-sm font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 bg-gray-100 dark:bg-gray-800"
+          data-tab="Next.js"
+        >
+          Web
+        </button>
+        <button
+          class="px-4 py-2 transition-colors rounded-full text-sm font-semibold hover:bg-gray-100 dark:hover:bg-gray-800"
+          data-tab="React"
+        >
+          Apps
+        </button>
+      </div>
+
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+      >
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+  </div>
+  </main>
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('[data-tab]');
+    const projects = document.querySelectorAll('#proyectos article');
+    
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        buttons.forEach(btn => {
+          btn.classList.remove('bg-gray-100', 'dark:bg-gray-800');
+        });
+        
+        button.classList.add('bg-gray-100', 'dark:bg-gray-800');
+        
+        const tab = button.getAttribute('data-tab') || '';
+        
+        projects.forEach(project => {
+          if (project instanceof HTMLElement) {
+            const tags = Array.from(project.querySelectorAll('span'))
+              .map(tag => tag.textContent?.trim() || '');
+            
+            const hasTag = tags.some(tagText => {
+              if (tab === 'React') {
+                return tagText.includes('React');
+              }
+              return tagText.includes(tab);
+            });
+
+            project.style.display = hasTag ? 'flex' : 'none';
+          }
+        });
+      });
+    });
+
+    // Activar el primer botón (Web) por defecto
+    const defaultButton = document.querySelector('[data-tab="Next.js"]');
+    if (defaultButton instanceof HTMLElement) {
+      defaultButton.click();
+    }
+  });
+</script>

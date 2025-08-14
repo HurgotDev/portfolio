@@ -1,0 +1,34 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "Octubre 2021 - Presente",
+    title: "Tech Lead y Desarrollador FullStack",
+    company: "Eme Agencia Digital, Barranquilla, Colombia",
+    description:
+      "Lidero un equipo de desarrolladores, asignando tareas, supervisando entregables y asegurando estándares de calidad en el código. Desarrollo aplicaciones personalizadas utilizando tecnologías como React, Next.js y Feathers.js, logrando experiencias de usuario óptimas y rendimiento eficiente. Coordino reuniones con clientes para identificar necesidades, establecer requerimientos y presentar avances, garantizando la alineación con los objetivos del proyecto. Diseñé e implementé un sistema de planificación de inventarios conectado a bases de datos DMS, mejorando significativamente la precisión en cálculos de ventas y stock. Supervisé la creación de una app de Shopify para personalización de productos, integrando APIs como Stuller y automatizando procesos de dropshipping.",
+  },
+  {
+    "date": "Noviembre 2020 - Octubre 2021",
+    "title": "Desarrollador FullStack",
+    "company": "Wow Desarrolladores Digitales S.A.S, Colombia",
+    "description": "Construí aplicaciones web escalables y fáciles de mantener, empleando tecnologías como Node.js y React. Implementé mejoras de rendimiento que redujeron los tiempos de carga en un 30%, optimizando la experiencia del usuario. Diseñé y desarrollé interfaces intuitivas y atractivas para diversos proyectos web."
+  },
+  {
+    "date": "Marzo 2020 - Noviembre 2020",
+    "title": "Desarrollador Web",
+    "company": "Savanz, Colombia",
+    "description": "Desarrollé y mantuve sitios web utilizando WordPress, PHP y JavaScript vanilla, adaptando soluciones a las necesidades del cliente. Implementé funcionalidades personalizadas para mejorar el diseño y la usabilidad de las plataformas web. Realicé integraciones con APIs y aseguré la compatibilidad multiplataforma para una mayor accesibilidad."
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

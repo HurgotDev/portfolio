@@ -1,0 +1,36 @@
+---
+const personalImageAlt = "Hugo Gutierrez";
+const birthDate = new Date('1999-02-28');
+const currentDate = new Date();
+const age = currentDate.getFullYear() - birthDate.getFullYear();
+const monthDiff = currentDate.getMonth() - birthDate.getMonth();
+const dayDiff = currentDate.getDate() - birthDate.getDate();
+
+// Ajustar edad si aún no ha cumplido años este año
+const finalAge = (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) ? age - 1 : age;
+
+// Calcular años de experiencia desde 2020
+const startYear = 2020;
+const currentYear = new Date().getFullYear();
+const experienceYears = currentYear - startYear;
+---
+
+<article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
+  <div
+    class="[&>p]:mb-4 [&>p>strong]:text-lime-500 dark:[&>p>strong]:text-lime-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+  >
+    <p>
+      Me llamo Hugo Gutiérrez, tengo {finalAge} años. Soy <strong>Ingeniero de Sistemas</strong> con <strong>{experienceYears} años de experiencia como Tech Lead y Desarrollador FullStack</strong>, especializado en la creación de soluciones digitales innovadoras para optimizar procesos y mejorar el rendimiento de los productos.
+    </p>
+
+    <p>
+      Poseo habilidades destacadas en <strong>liderazgo, planificación estratégica y ejecución técnica</strong>, combinadas con un enfoque ágil para entregar proyectos exitosos. Mi pasión por la tecnología y la mejora continua me impulsa a resolver desafíos complejos con soluciones efectivas y escalables.
+    </p>
+
+    <p>
+      Como Tech Lead, mi enfoque es crear experiencias de usuario óptimas, liderar equipos de desarrollo y coordinar con clientes para garantizar la alineación con los objetivos del proyecto, siempre manteniendo estándares de alta calidad en el código.
+    </p>
+  </div>
+
+  <img width="200" height="200" src="/hugo-2.jpeg" alt={personalImageAlt} class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-lime-500/5 ring-1 ring-black/70 dark:ring-white/20 " style="object-position: 50% 50%">
+</article>
