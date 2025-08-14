@@ -7,6 +7,6 @@ import robotsTxt from "astro-robots-txt";
 export default defineConfig({
   integrations: [tailwind(), robotsTxt()],
   output: "static",
-  site: "https://hurgotdev.github.io/porfolio/",
-  base: "/porfolio/",
+  site: "https://hurgotdev.github.io/portfolio/",
+  base: "/portfolio/",
 });
