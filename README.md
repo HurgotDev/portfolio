@@ -1,6 +1,6 @@
 # Portfolio de Hugo Gutiérrez
 
-Portfolio personal de Hugo Gutiérrez, Tech Lead y Desarrollador FullStack especializado en la creación de soluciones digitales innovadoras para optimizar procesos y mejorar el rendimiento de los productos.
+Portfolio personal de Hugo Gutiérrez, Technical Delivery Lead en Banco Davivienda y Desarrollador FullStack especializado en la creación de soluciones digitales innovadoras para optimizar procesos y mejorar el rendimiento de los productos.
 
 ## 🚀 Tecnologías
 
@@ -13,10 +13,14 @@ Portfolio personal de Hugo Gutiérrez, Tech Lead y Desarrollador FullStack espec
 
 ## 📋 Experiencia
 
-- **Tech Lead y Desarrollador FullStack** en Eme Agencia Digital (Octubre 2021 - Presente)
-  - Lidero equipos de desarrollo, asignando tareas y supervisando entregables
-  - Desarrollo aplicaciones personalizadas con React, Next.js y Feathers.js
-  - Coordino reuniones con clientes para identificar necesidades y establecer requerimientos
+- **Technical Delivery Lead** en Banco Davivienda (Julio 2026 - Presente)
+
+- **Especialista en Desarrollo Mobile** en Banco Davivienda (Septiembre 2025 - Julio 2026)
+
+- **Desarrollador FullStack y Tech Lead** en e-me Growth and Development Agency (Octubre 2021 - Septiembre 2025)
+  - Lideré equipos de desarrollo, asignando tareas y supervisando entregables
+  - Desarrollé aplicaciones personalizadas con React, Next.js y Feathers.js
+  - Coordiné reuniones con clientes para identificar necesidades y establecer requerimientos
   - Diseñé e implementé sistemas de planificación de inventarios conectados a bases de datos DMS
   - Supervisé la creación de apps de Shopify con integración de APIs
 
